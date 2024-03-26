@@ -10,7 +10,8 @@ const Content = ({ categories }) => {
   //   setCart(cartCopy);
   // };
 
-  let count = 0;
+  const [count, setCount] = useState([1]);
+  const [prices, setPrices] = useState(0);
 
   return (
     <>
@@ -35,14 +36,36 @@ const Content = ({ categories }) => {
                               <div
                                 className="menu-elem"
                                 onClick={() => {
-                                  console.log(elem.id);
+                                  // console.log(cart);
+                                  // console.log(elem);
                                   // console.log("j'ai cliqué");
                                   let cartCopy = [...cart];
+                                  let countCopy = [...count];
+                                  let newPrice = prices;
+
+                                  newPrice = Number(elem.price) + newPrice;
+
+                                  console.log(newPrice);
+
+                                  setPrices(newPrice);
+
+                                  for (let i = 0; i < cart.length; i++) {
+                                    if (cart[i].id !== elem.id) {
+                                      countCopy.push(1);
+                                      setCount(countCopy);
+                                    } else if (cart[i].id === elem.id) {
+                                      countCopy[i] = count[i] + 1;
+
+                                      return setCount(countCopy);
+                                    }
+                                  }
+
+                                  // console.log(count);
 
                                   cartCopy.push(elem);
                                   setCart(cartCopy);
 
-                                  console.log(cart);
+                                  // console.log(cart);
                                   // console.log(cartCopy);
                                 }}
                               >
@@ -85,30 +108,31 @@ const Content = ({ categories }) => {
             <div className="choices">
               <button>Valider mon panier</button>
               {cart &&
-                cart.map((elem) => {
-                  console.log(elem);
+                cart.map((elem, index) => {
+                  // console.log(elem);
 
                   return (
                     <div key={elem.id} className="counter">
                       <button>-</button>
-                      <p>{count}</p>
+                      <p>{count[index]}</p>
                       <button>+</button>
                       <p>{elem.title}</p>
+                      <p>{elem.price * count[index]} €</p>
                     </div>
                   );
                 })}
-            </div>
-            <div>
-              <p>Sous-Total</p>
-              <p></p>
-            </div>
-            <div>
-              <p>Frais de livraison</p>
-              <p></p>
-            </div>
-            <div>
-              <p>Total</p>
-              <p></p>
+              <div>
+                <p>Sous-Total</p>
+                <p>{prices}</p>
+              </div>
+              <div>
+                <p>Frais de livraison</p>
+                <p>2,5€</p>
+              </div>
+              <div>
+                <p>Total</p>
+                <p>{prices + 2.5} €</p>
+              </div>
             </div>
           </div>
         </div>

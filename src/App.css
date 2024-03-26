@@ -232,8 +232,6 @@ main .meal {
   margin-top: 10px;
   background-color: white;
   width: 350px;
-  height: 350px;
-  justify-content: space-around;
   align-items: center;
 }
 
