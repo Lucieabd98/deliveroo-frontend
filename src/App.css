@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+/* 
+@font-face {
+  font-family: "Stratos Deliveroo Web";
+  src: url("./assets/fonts/IBMPlexSans-Bold.eot");
+  src: url("./asset/fonts/StratosDeliverooWeb-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff") format("woff"),
+    url("./assets/fonts/IBMPlexSans-Bold.ttf") format("truetype"),
+    url("./assets/fonts/StratosDeliverooWeb-SemiBold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./assets/fonts/IBMPlexSans-Bold.eot");
+  src: url("./assets/fonts/IBMPlexSans-Bold.eot") format("embedded-opentype"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff") format("woff"),
+    url("./assets/fonts/IBMPlexSans.ttf") format("truetype"),
+    url("./assets/fonts/IBMPlexSans-Bold.svg#IBMPlexSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./assets/fontsIBMPlexSans.eot");
+  src: url("./assets/fontsIBMPlexSans.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fontsIBMPlexSans.woff2") format("woff2"),
+    url("./assets/fontsIBMPlexSans.woff") format("woff"),
+    url("./assets/fontsIBMPlexSans.ttf") format("truetype"),
+    url("./assets/fontsIBMPlexSans.svg#IBMPlexSans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== HEADER =========*/
+
+header h1 {
+  font-family: "Stratos Deliveroo Web";
+  font-size: 30px;
+  line-height: 26px;
+  color: #2e3333;
+  padding: 20px 0;
+  letter-spacing: 0.5px;
+}
+
+header .top-bar {
+  border-bottom: 1px solid #e9ebeb;
+  height: 60px;
+  display: flex;
+  top: 0px;
+  position: sticky;
+  background-color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 41px;
+}
+
+header .restaurant-info {
+  padding: 30px 0;
+  display: flex;
+}
+
+header .text {
+  width: 850px;
+  padding-right: 40px;
+}
+
+header p {
+  font-family: "IBM Plex Sans";
+  color: #868a8a;
+  margin: 20px 0;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+header .main-image img {
+  height: 196px;
+  border-radius: 5px;
+}
+
+/* ========= MAIN ========= */
+
+main {
+  background-color: #f3f5f5;
+
+  padding: 20px 0;
+}
+
+main h2 {
+  font-family: "IBM Plex Sans";
+  font-weight: bold;
+  color: #2e3333;
+  font-size: 24px;
+  line-height: 22px;
+}
+
+main .menu {
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 0;
+  border-radius: 15px;
+}
+
+main h3 {
+  margin: 20px 0 20px 0;
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
+  line-height: 15.6px;
+}
+
+.menu-columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.menu-columns .menu {
+  width: 50%;
+  padding: auto 20px 20px 20px;
+  min-width: 300px;
+}
+
+.menu .menu-elem {
+  background-color: white;
+  align-items: flex-start;
+  padding: 5px 0 10px 10px;
+  display: flex;
+  align-items: center;
+  height: 164px;
+  border-radius: 5px;
+}
+
+.menu-text {
+  height: 100%;
+  flex: 1.5;
+  /* overflow: hidden; */
+}
+
+.description-text {
+  display: flex;
+
+  overflow: hidden;
+}
+
+.menu-text p {
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  line-height: 20px;
+  color: #808484;
+  margin-bottom: 10px;
+  flex-shrink: 0.5;
+}
+
+.menu-text .price {
+  font-family: "IBM Plex Sans";
+  color: #808484;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+div .price-popularity {
+  display: flex;
+  align-items: center;
+}
+
+.menu-text .popularity {
+  color: #ff8000;
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: bold;
+}
+
+.price-popularity .icon-STAR_FILL {
+  margin-right: 2.5px;
+  color: #ff8000;
+  font-size: 1.3rem;
+}
+
+.meal {
+  width: 827px;
+}
+
+main .menu .menu-picture {
+  border-radius: 5px;
+  height: 130px;
+  width: 130px;
+  flex: 1;
+  margin: 10px;
+}
+
+main .menu .menu-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
