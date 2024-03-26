@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../assets/icons/style.css";
 import Cart from "./Cart";
-import { c } from "vite/dist/node/types.d-aGj9QkWt";
 
 const Content = ({ categories }) => {
   const [cart, setCart] = useState([]);
@@ -10,6 +9,8 @@ const Content = ({ categories }) => {
   //   cartCopy.push(mealTypes.name);
   //   setCart(cartCopy);
   // };
+
+  let count = 0;
 
   return (
     <>
@@ -34,11 +35,15 @@ const Content = ({ categories }) => {
                               <div
                                 className="menu-elem"
                                 onClick={() => {
+                                  console.log(elem.id);
                                   // console.log("j'ai cliqué");
                                   let cartCopy = [...cart];
-                                  cartCopy.push(elem.title);
+
+                                  cartCopy.push(elem);
                                   setCart(cartCopy);
-                                  // console.log(cart);
+
+                                  console.log(cart);
+                                  // console.log(cartCopy);
                                 }}
                               >
                                 <div className="menu-text">
@@ -81,12 +86,14 @@ const Content = ({ categories }) => {
               <button>Valider mon panier</button>
               {cart &&
                 cart.map((elem) => {
+                  console.log(elem);
+
                   return (
                     <div key={elem.id} className="counter">
                       <button>-</button>
-                      <p>0</p>
+                      <p>{count}</p>
                       <button>+</button>
-                      <p>{elem}</p>
+                      <p>{elem.title}</p>
                     </div>
                   );
                 })}
