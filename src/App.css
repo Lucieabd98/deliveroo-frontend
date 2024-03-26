@@ -149,6 +149,7 @@ main h3 {
   align-items: center;
   height: 164px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .menu-text {
@@ -214,4 +215,32 @@ main .menu .menu-picture img {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+main .meal {
+  display: flex;
+}
+
+/*========= CART =========== */
+
+.counter {
+  display: flex;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: white;
+  width: 350px;
+  height: 350px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .container {
+  display: flex;
+}
+
+.cart .counter {
+  margin: 20px;
 }

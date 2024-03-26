@@ -12,7 +12,7 @@ function App() {
 
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3200/");
-    console.log(response.data);
+    // console.log(response.data);
     setData(response.data);
     setIsLoading(false);
   };
